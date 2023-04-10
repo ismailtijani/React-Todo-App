@@ -1,0 +1,240 @@
+@import "./sass/_variable";
+@import "./sass/mixin";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 20px;
+  background: $app-bg-color;
+  @include display;
+  justify-content: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+
+  input[type="date"]::before {
+    content: attr(placeholder);
+  }
+
+  input[type="date"] {
+    color: $button-color;
+    width: 20px;
+    background: $input-date-bg;
+  }
+
+  input[type="date"]:focus::before,
+  input[type="date"]:valid::before {
+    content: "" !important;
+  }
+
+  .task-container {
+    width: 500px;
+    font-family: sans-serif;
+    height: 100%;
+
+    h3 {
+      color: $text-color;
+    }
+
+    button {
+      padding: 8px;
+      cursor: pointer;
+      background: $button-icon-bg;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-weight: bold;
+      color: $button-color;
+      margin: 0 5px;
+    }
+
+    input[type="text"] {
+      background: transparent;
+      outline: none;
+      border: none;
+      width: 100%;
+      color: $text-color;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .task-container-header {
+      background: transparent;
+      margin-bottom: 20px;
+
+      .task-container-heading {
+        border: 0.1px solid $text-color;
+        background: transparent;
+        opacity: 7;
+        border-radius: 8px;
+        padding: 10px;
+        @include display;
+
+        span {
+          margin-right: 10px;
+        }
+
+        .add-icon {
+          color: $button-icon-bg;
+          cursor: pointer;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .all-tasks {
+      margin-bottom: 30px;
+
+      .tasks {
+        display: block;
+
+        .task {
+          margin: 20px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          background: $todo-bg-color;
+          border-radius: 8px;
+          padding: 10px;
+          color: $text-color;
+
+          .sub-task-count {
+            margin-right: 10px;
+            @include display;
+          }
+
+          input {
+            margin-right: 10px;
+          }
+
+          .todo-icons {
+            @include display;
+            font-size: 1.2rem;
+          }
+
+          .todo-icons-inner {
+            opacity: 0;
+
+            span {
+              color: $todo-hover-icons-color;
+            }
+          }
+
+          .arrow {
+            font-size: 1.5rem;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            .todo-icons-inner {
+              opacity: 1;
+            }
+          }
+
+          .edit-todo-input {
+            background: transparent;
+            border-radius: 8px;
+            width: 100%;
+            padding: 10px;
+          }
+
+          span {
+            margin-right: 8px;
+          }
+
+          h4 {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .add-sub-task {
+          border: 0.5px solid white;
+          border-radius: 8px;
+          padding: 10px;
+          @include display-between;
+
+          span {
+            margin-right: 10px;
+          }
+
+          .add-icon {
+            color: $button-icon-bg;
+            cursor: pointer;
+            font-size: 2rem;
+
+          }
+        }
+
+        .sub-todo {
+          margin: 20px 0 20px 20px;
+          @include display-between;
+          background: $todo-bg-color;
+          border-radius: 8px;
+          padding: 10px;
+          color: $text-color;
+
+          span {
+            margin-right: 10px;
+          }
+        }
+
+        .none {
+          display: none;
+        }
+      }
+    }
+
+    .circle-icon {
+      color: $button-icon-bg;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .completed-tasks {
+      .completed-task {
+        margin: 20px 0;
+        @include display-between;
+        background: $todo-bg-color;
+        border-radius: 8px;
+        padding: 10px;
+        color: $text-color;
+
+        span {
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        h4 {
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .left,
+    .completed-task-inner {
+      display: flex;
+    }
+
+    .add-sub-task-inner,
+    .sub-todo-content,
+    .down,
+    .due-date {
+      @include display;
+    }
+  }
+}
