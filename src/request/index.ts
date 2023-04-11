@@ -1,4 +1,4 @@
-import baseUrl from "../contsnt";
+import baseUrl from "../constant";
 import { ITodo, ISubTodo } from "../interface";
 import { v4 as uuidv4 } from "uuid";
 

@@ -5,7 +5,7 @@ import React, {
   useReducer,
   useState,
 } from "react";
-import baseUrl from "../contsnt";
+import baseUrl from "../constant";
 import { ITodo, ISubTodo } from "../interface";
 import { v4 as uuidv4 } from "uuid";
 
@@ -155,7 +155,6 @@ const TODO_ACTION_TYPES = {
   SET_TODOS: "SET_TODOS",
   SET_COMPLETED_TODOS: "SET_COMPLETED_TODOS",
   SET_UNCOMPLETED_TODOS: "SET_UNCOMPLETED_TODOS",
-  // SET_SUB_TODO_INPUT: "SET_SUB_TODO_INPUT",
 };
 
 const INITIAL_STATE = {
@@ -175,11 +174,6 @@ const todoReducer = (state: any, action: any) => {
         ...state,
         ...payload,
       };
-    // case TODO_ACTION_TYPES.SET_SUB_TODO_INPUT:
-    //   return {
-    //     ...state,
-    //     isSubTodoInputOpen: payload,
-    //   };
     default:
       throw new Error(`Unhandled type ${type} in cartReducer`);
   }
@@ -218,7 +212,7 @@ export const TodoProvider = ({ children }: { children: any }) => {
 
   useEffect(() => {
     getTodos();
-  }, []);
+  });
 
   const updatedTodoReducer = async () => {
     const todos = await get();

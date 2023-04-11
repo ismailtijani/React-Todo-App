@@ -6,7 +6,7 @@ import { useTodoContext } from "./context/todo.context";
 import TodoList from "./components/todo-list.component";
 
 function App() {
-  const { completedTodos, getTodos } = useTodoContext();
+  const { completedTodos } = useTodoContext();
 
   return (
     <div className="app">

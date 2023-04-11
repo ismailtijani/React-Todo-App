@@ -13,7 +13,6 @@ const TodoList = () => {
     addSubTodo,
     isSubTodoInputOpen,
     setIsSubTodoInputOpen,
-    isSubTodoListOpen
   } = useTodoContext();
 
   return (

@@ -3,22 +3,22 @@
     {
       "id": "b37931f8-2fda-4322-8962-54df1c948d56",
       "title": "Sleep Well",
-      "completed": false,
+      "completed": true,
       "subTodos": [
         {
           "id": "1faad239-62fb-4a35-ae9c-a5c403231270",
           "title": "Take a Nap",
-          "completed": false
+          "completed": true
         },
         {
           "id": "42333b77-5d6e-4a64-a62e-a48aa72d9b51",
           "title": "Make my bed",
-          "completed": false
+          "completed": true
         },
         {
           "id": "0a84f847-8423-4068-a3d6-d20179fb7fb8",
           "title": "Take a shower",
-          "completed": false
+          "completed": true
         }
       ],
       "dueDate": "2023-04-13"
@@ -36,7 +36,7 @@
         {
           "id": "7eb6c344-5671-4f1f-8d2a-820a3c55816f",
           "title": "Study 2 modules more",
-          "completed": false
+          "completed": true
         }
       ],
       "dueDate": "2023-04-03"
@@ -55,22 +55,29 @@
       "dueDate": "2023-04-02"
     },
     {
-      "id": "a2c140fc-fe87-41b7-b85d-4d78396f28eb",
-      "title": "Submit Task",
-      "completed": true,
+      "id": "0a477101-245c-4f85-ac33-d4d4f8e1e2ce",
+      "title": "React State Management",
+      "completed": false,
+      "dueDate": "2023-04-11T02:22:21.524Z",
+      "subTodos": []
+    },
+    {
+      "id": "f3ac8ec7-5c6c-47e2-ad86-683a52ce488a",
+      "title": "Kimbali Backend",
+      "completed": false,
+      "dueDate": "2023-04-11T02:23:27.811Z",
       "subTodos": [
         {
-          "id": "7548dfaa-e3db-4ae1-b5ac-9a06a1adcd98",
-          "title": "Chat Mr Imo Inyang",
-          "completed": true
+          "id": "60f637ae-9b85-47cb-8282-afafb292a780",
+          "title": "Implement transaction routes",
+          "completed": false
         },
         {
-          "id": "51695a00-c3c6-4a55-871b-ce2513ea8268",
-          "title": "Review my Resume",
-          "completed": true
+          "id": "59d64cdc-9fed-44fe-90df-ac44c7b7b394",
+          "title": "Documentation",
+          "completed": false
         }
-      ],
-      "dueDate": "2023-04-02"
+      ]
     }
   ]
 }
